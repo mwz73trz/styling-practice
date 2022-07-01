@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import contactAPI from "../api/contactAPI";
 import Contacts from "../components/Contacts";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -31,6 +32,7 @@ export default function HomePage(props) {
     >
       <h1>{props.username}'s Contacts</h1>
       {renderContacts()}
+      <Link to="/contacts/add">Create New Contact</Link>
     </ListGroup>
   );
 }

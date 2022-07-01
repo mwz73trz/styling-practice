@@ -5,6 +5,9 @@ import CheckLoginPage from "./pages/CheckLoginPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
+import CreateContactPage from "./pages/CreateContactPage";
+import DeleteContactPage from "./pages/DeleteContactPage";
 import { useState } from "react";
 
 export default function App() {
@@ -25,6 +28,33 @@ export default function App() {
               <CheckLoginPage
                 username={username}
                 actualPage={() => <HomePage username={username} />}
+              />
+            }
+          />
+          <Route
+            path="contacts/:id"
+            element={
+              <CheckLoginPage
+                username={username}
+                actualPage={() => <ContactPage username={username} />}
+              />
+            }
+          />
+          <Route
+            path="contacts/add"
+            element={
+              <CheckLoginPage
+                username={username}
+                actualPage={() => <CreateContactPage username={username} />}
+              />
+            }
+          />
+          <Route
+            path="contacts/:id/delete"
+            element={
+              <CheckLoginPage
+                username={username}
+                actualPage={() => <DeleteContactPage username={username} />}
               />
             }
           />
