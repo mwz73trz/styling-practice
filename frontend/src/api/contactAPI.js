@@ -19,7 +19,7 @@ contactAPI.logout = async () => {
 
 contactAPI.signup = async (signupData) => {
   return await apiHelpers.tryCatchFetch(() =>
-    axios.post(`${BASE_URL}signup/`, signupData, apiHelpers.getCsrfConfig())
+    axios.post(`${BASE_URL}users/`, signupData, apiHelpers.getCsrfConfig())
   );
 };
 
