@@ -32,7 +32,7 @@ export default function ContactPage(props) {
         </Card.Text>
         <Card.Text>{contact.phone}</Card.Text>
         <Card.Text>{contact.email}</Card.Text>
-        <Card.Link as={Link} to="/">
+        <Card.Link as={Link} to={`/contacts/${contact.id}/update`}>
           Update Contact
         </Card.Link>{" "}
         <Card.Link as={Link} to={`/contacts/${contact.id}/delete`}>
